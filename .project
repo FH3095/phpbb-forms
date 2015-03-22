@@ -3,6 +3,8 @@
 	<name>Forms</name>
 	<comment></comment>
 	<projects>
+		<project>phpbb</project>
+		<project>phpbb-pages</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
