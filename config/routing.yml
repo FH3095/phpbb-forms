@@ -1,0 +1,9 @@
+fh3095_forms_main_controller:
+    path:     /form/{route}
+    defaults: { _controller: fh3095.forms.controller:display }
+    methods:  [GET]
+
+fh3095_forms_main_controller_post:
+    path:     /form/{route}
+    defaults: { _controller: fh3095.forms.controller:submit }
+    methods:  [POST]

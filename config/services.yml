@@ -1,0 +1,12 @@
+services:
+    fh3095.forms.controller:
+        class: fh3095\forms\controller\main_controller
+        arguments:
+            - @config
+            - @symfony_request
+            - @request
+            - @auth
+            - @service_container
+            - @controller.helper
+            - @template
+            - @user

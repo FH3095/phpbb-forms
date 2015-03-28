@@ -16,13 +16,14 @@
 		"composer/installers": "~1.0"
 	},
     "extra": {
-        "display-name": "phpbb-forms",
+        "display-name": "phpbb Forms",
         "soft-require": {
-            "phpbb/phpbb": ">=3.1.0,<3.2.*@dev"
+            "phpbb/phpbb": ">=3.1.0,<3.2.*@dev",
+            "phpbb/pages": ">=1.0.0"
         },
         "version-check": {
-            "host": "raw.githubusercontent.com",
-			"directory": "/FH3095/phpbb-forms/master",
+            "host": "fh3095.github.io",
+			"directory": "/phpbb/forms",
 			"filename": "version.json"
         }
 

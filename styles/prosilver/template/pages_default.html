@@ -1,0 +1,45 @@
+{# Use the space below to include external CSS and JS files # Here are
+some example usages: # # local files relative to this template file
+(when stored inside phpBB's style directories): #
+<!-- INCLUDEJS script.js -->
+#
+<!-- INCLUDECSS ../theme/style.css -->
+# # hosted on external sites: #
+<!-- INCLUDEJS http://code.jquery.com/jquery-migrate-1.2.1.min.js -->
+#
+<!-- INCLUDECSS https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css -->
+# # local files stored inside the Pages extension: #
+<!-- INCLUDEJS @phpbb_pages/script.js -->
+#
+<!-- INCLUDECSS @phpbb_pages/../theme/style.css -->
+# #}
+<!-- INCLUDECSS @phpbb_pages/../theme/pages_controller.css -->
+<!-- INCLUDE overall_header.html -->
+
+<div class="panel">
+	<div class="inner">
+		<h2 class="pages-title">{PAGE_TITLE}</h2>
+		<div class="content pages-content">
+			<form method="POST" action="{S_FORM_TARGET}">
+				<fieldset>
+					<input type="text" name="in_text" required><br> <input
+						type="number" name="in_number">
+				</fieldset>
+				<fieldset class="submit-buttons">
+					{S_FORM_TOKEN}
+					{S_HIDDEN_FIELDS}
+					<!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_CODE -->
+						<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
+					<!-- ENDIF -->
+
+					<input type="reset" name="reset" value="{L_RESET}" class="button2"
+						style="font-size: 0.8em" /> <input type="submit" name="post"
+						value="{L_SUBMIT}" class="button1" style="font-size: 0.8em" />
+				</fieldset>
+			</form>
+		</div>
+		<!-- EVENT fh3095_forms_after_page_content -->
+	</div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->
